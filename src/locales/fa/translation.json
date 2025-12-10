@@ -1,0 +1,138 @@
+{
+    "app": {
+        "title": "RscScan",
+        "subtitle": "Next.js Server Actions RCE",
+        "warning": {
+            "title": "فقط برای مصارف آموزشی - هشدار حقوقی",
+            "text": "این ابزار <1>توسعه یافته فقط برای اهداف آموزشی و تست نفوذ مجاز</1> است. دسترسی غیرمجاز به سیستم‌های کامپیوتری غیرقانونی است. فقط در سیستم‌هایی که مالک آن هستید یا اجازه کتبی صریح دارید از این اسکنر استفاده کنید. سوء استفاده از این ابزار ممکن است منجر به پیگرد قانونی شود.",
+            "footer": "RscScan | Next.js Server Actions Prototype Pollution RCE"
+        },
+        "mode": {
+            "live": "حالت زنده",
+            "demo": "حالت دمو"
+        },
+        "empty_state": {
+            "title": "آماده اسکن",
+            "description": "برای شروع اسکن آسیب‌پذیری، نقطه پایانی DNS خود را پیکربندی کرده و لیست اهداف را بارگذاری کنید."
+        }
+    },
+    "header": {
+        "educational": "آموزشی",
+        "settings": "تنظیمات",
+        "about": "درباره",
+        "theme_light": "تغییر به حالت روشن",
+        "theme_dark": "تغییر به حالت تاریک",
+        "demo_toggle": "تغییر حالت دمو برای تست ایمن",
+        "select_language": "انتخاب زبان"
+    },
+    "settings": {
+        "title": "تنظیمات",
+        "scanner_config": "پیکربندی اسکنر",
+        "request_timeout": "مهلت زمانی درخواست",
+        "request_timeout_desc": "حداکثر زمان انتظار برای هر درخواست (۱-۶۰ ثانیه)",
+        "max_concurrent": "حداکثر درخواست‌های همزمان",
+        "max_concurrent_desc": "تعداد درخواست‌های همزمان (۱-۱۰۰)",
+        "export_settings": "تنظیمات خروجی",
+        "default_format": "فرمت پیش‌فرض خروجی",
+        "auto_save": "ذخیره خودکار نتایج",
+        "auto_save_desc": "ذخیره خودکار نتایج پس از پایان اسکن",
+        "appearance": "ظاهر",
+        "theme_preference": "تم مورد علاقه",
+        "theme_system": "پیش‌فرض سیستم",
+        "theme_light": "روشن",
+        "theme_dark": "تاریک",
+        "desktop_settings": "تنظیمات دسکتاپ",
+        "minimize_tray": "کوچک کردن به سینی سیستم",
+        "minimize_tray_desc": "اجرای برنامه در پس‌زمینه هنگام بستن پنجره",
+        "reset_defaults": "بازنشانی به پیش‌فرض",
+        "cancel": "لغو",
+        "save": "ذخیره تنظیمات",
+        "saved": "تنظیمات با موفقیت ذخیره شد",
+        "reset_success": "تنظیمات به حالت پیش‌فرض بازگشت"
+    },
+    "config": {
+        "title": "پیکربندی اسکن",
+        "description": "پیکربندی اندپوینت DNS و لیست اهداف",
+        "dns_endpoint": "اندپوینت بازخورد DNS",
+        "dns_placeholder": "مثال: your-collaborator-url.com",
+        "dns_help": "اندپوینت exfiltration DNS خود را وارد کنید (مثلاً Burp Collaborator، Interactsh)",
+        "target_list": "لیست اهداف",
+        "target_placeholder": "آدرس‌ها (هر خط یک آدرس) یا فایل را بکشید...",
+        "loaded_targets": "✓ {{count}} هدف بارگذاری شد",
+        "upload_help": "یک فایل متنی با یک آدرس URL در هر خط آپلود کنید",
+        "load_file": "بارگذاری از فایل",
+        "clear": "پاک کردن",
+        "start_scan": "شروع اسکن",
+        "scanning": "در حال اسکن...",
+        "stop_scan": "توقف اسکن",
+        "reset": "بازنشانی",
+        "demo_notice": "<strong>حالت دمو فعال است:</strong> اسکن از داده‌های شبیه‌سازی شده به جای درخواست‌های واقعی HTTP استفاده خواهد کرد.",
+        "validation": {
+            "dns_required": "اندپوینت DNS الزامی است",
+            "targets_required": "لطفاً حداقل یک آدرس هدف اضافه کنید"
+        },
+        "scan": {
+            "completed": "اسکن با موفقیت تکمیل شد",
+            "failed": "اسکن با خطا مواجه شد: {{error}}"
+        },
+        "export": {
+            "no_results": "نتیجه‌ای برای خروجی وجود ندارد",
+            "success": "نتایج با موفقیت صادر شد",
+            "failed": "خطا در صادرات: {{error}}"
+        }
+    },
+    "results": {
+        "title": "نتایج اسکن",
+        "export": "خروجی گرفتن از نتایج",
+        "columns": {
+            "status": "وضعیت",
+            "url": "URL",
+            "time": "زمان",
+            "details": "جزئیات",
+            "actions": "عملیات"
+        },
+        "status": {
+            "vulnerable": "آسیب‌پذیر",
+            "safe": "امن",
+            "error": "خطا"
+        },
+        "tooltips": {
+            "copy_url": "کپی URL",
+            "view_details": "مشاهده جزئیات"
+        },
+        "filters": {
+            "all": "همه وضعیت‌ها",
+            "vulnerable": "آسیب‌پذیر",
+            "safe": "امن",
+            "error": "خطاها"
+        }
+    },
+    "statistics": {
+        "total": "کل اسکن شده",
+        "vulnerable": "آسیب‌پذیر یافت شد",
+        "safe": "اهداف امن",
+        "errors": "خطاهای اتصال"
+    },
+    "about": {
+        "title": "درباره RscScan",
+        "description": "RscScan یک ابزار امنیتی تخصصی است که برای شناسایی",
+        "description_highlight": "آسیب‌پذیری‌های Next.js Server Actions Prototype Pollution (CVE-2025-55182)",
+        "description_end": "توسعه یافته است. این ابزار به محققان امنیتی و توسعه‌دهندگان کمک می‌کند تا بردارهای احتمالی RCE را در برنامه‌های Next.js شناسایی کنند.",
+        "version": "نسخه",
+        "developer": "توسعه‌دهنده",
+        "license": "مجوز",
+        "website": "وب‌سایت",
+        "view_github": "مشاهده در گیت‌هاب",
+        "close": "بستن",
+        "special_thanks": "تشکر ویژه",
+        "original_creator": "سازنده اصلی و مدرس",
+        "guidance_text": "این پروژه تحت راهنمایی و محتوای آموزشی PentesterLand Academy توسعه یافته است.",
+        "technology_stack": "تکنولوژی‌ها",
+        "tech_frontend": "فرانت‌اند:",
+        "tech_build": "بیلد:",
+        "tech_styling": "استایل‌دهی:",
+        "tech_desktop": "دسکتاپ:",
+        "license_text": "تحت لایسنس MIT",
+        "copyright": "© 2025 VeilVulp"
+    }
+}

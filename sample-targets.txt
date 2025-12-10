@@ -1,0 +1,18 @@
+# Sample Target List for RscScan
+# 
+# This is a sample file for testing purposes.
+# One URL per line. Lines starting with # are comments.
+#
+# ⚠️ WARNING: Only scan systems you own or have explicit permission to test!
+#
+# Format: https://domain.com
+#
+
+# Example targets (replace with your authorized targets)
+https://example.com
+https://test.example.com
+https://demo.example.com
+https://staging.example.com
+https://dev.example.com
+
+# Add your authorized targets below:

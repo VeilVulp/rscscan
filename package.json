@@ -1,0 +1,96 @@
+{
+  "name": "rscscan",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "description": "RscScan - React Server Components Scan: Professional cross-platform vulnerability scanner for CVE-2025-55182 (Next.js Server Actions RCE)",
+  "author": "VeilVulp <veilvulp@outlook.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VeilVulp/Rscscan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VeilVulp/Rscscan/issues"
+  },
+  "homepage": "https://github.com/VeilVulp/Rscscan#readme",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage",
+    "electron:dev": "concurrently \"cross-env ELECTRON=true vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "electron:build": "cross-env ELECTRON=true vite build && electron-builder",
+    "electron:build:win": "cross-env ELECTRON=true vite build && electron-builder --win",
+    "electron:build:mac": "cross-env ELECTRON=true vite build && electron-builder --mac",
+    "electron:build:linux": "cross-env ELECTRON=true vite build && electron-builder --linux"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/noto-sans-sc": "^5.2.8",
+    "@fontsource/roboto": "^5.2.9",
+    "@fontsource/vazirmatn": "^5.2.8",
+    "axios": "^1.13.2",
+    "country-flag-icons": "^1.6.4",
+    "i18next": "^25.7.2",
+    "i18next-browser-languagedetector": "^8.2.0",
+    "lucide-react": "^0.447.0",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "react-i18next": "^16.4.0",
+    "react-toastify": "^11.0.5",
+    "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.17",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.0.3",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^5.1.2",
+    "@vitest/ui": "^2.1.9",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "jiti": "^2.6.1",
+    "jsdom": "^27.3.0",
+    "terser": "^5.44.1",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.9",
+    "wait-on": "^7.2.0"
+  },
+  "keywords": [
+    "security",
+    "cve",
+    "scanner",
+    "penetration-testing",
+    "educational",
+    "next.js",
+    "vulnerability",
+    "electron",
+    "desktop"
+  ],
+  "build": {
+    "extends": "./electron/builder.config.cjs",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  }
+}

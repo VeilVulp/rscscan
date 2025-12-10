@@ -1,0 +1,138 @@
+{
+    "app": {
+        "title": "RscScan",
+        "subtitle": "RCE через Prototype Pollution в Server Actions",
+        "warning": {
+            "title": "ТОЛЬКО ДЛЯ ОБРАЗОВАТЕЛЬНЫХ ЦЕЛЕЙ - ЮРИДИЧЕСКОЕ ПРЕДУПРЕЖДЕНИЕ",
+            "text": "Этот инструмент разработан <1>исключительно для образовательных целей и авторизованного тестирования безопасности</1>. Несанкционированный доступ к компьютерным системам незаконен. Используйте этот сканер только на системах, которыми вы владеете или на тестирование которых у вас есть письменное разрешение. Неправомерное использование может привести к уголовной ответственности.",
+            "footer": "RscScan | Next.js Server Actions Prototype Pollution RCE"
+        },
+        "mode": {
+            "live": "Live Режим",
+            "demo": "Демо Режим"
+        },
+        "empty_state": {
+            "title": "Готов к сканированию",
+            "description": "Настройте DNS endpoint и загрузите список целей для начала сканирования уязвимостей."
+        }
+    },
+    "header": {
+        "educational": "ОБРАЗОВАТЕЛЬНЫЙ",
+        "settings": "Настройки",
+        "about": "О программе",
+        "theme_light": "Включить светлую тему",
+        "theme_dark": "Включить темную тему",
+        "demo_toggle": "Включить демо-режим для безопасного тестирования",
+        "select_language": "Выберите язык"
+    },
+    "settings": {
+        "title": "Настройки",
+        "scanner_config": "Конфигурация сканера",
+        "request_timeout": "Тайм-аут запроса",
+        "request_timeout_desc": "Максимальное время ожидания ответа (1-60 секунд)",
+        "max_concurrent": "Макс. одновременных запросов",
+        "max_concurrent_desc": "Количество одновременных запросов (1-100)",
+        "export_settings": "Настройки экспорта",
+        "default_format": "Формат экспорта по умолчанию",
+        "auto_save": "Автосохранение результатов",
+        "auto_save_desc": "Автоматически сохранять результаты после завершения",
+        "appearance": "Внешний вид",
+        "theme_preference": "Тема оформления",
+        "theme_system": "Системная",
+        "theme_light": "Светлая",
+        "theme_dark": "Темная",
+        "desktop_settings": "Настройки рабочего стола",
+        "minimize_tray": "Сворачивать в трей",
+        "minimize_tray_desc": "Оставлять приложение работать в фоне при закрытии окна",
+        "reset_defaults": "Сбросить по умолчанию",
+        "cancel": "Отмена",
+        "save": "Сохранить",
+        "saved": "Настройки успешно сохранены",
+        "reset_success": "Настройки сброшены по умолчанию"
+    },
+    "config": {
+        "title": "Конфигурация сканирования",
+        "description": "Настройте DNS endpoint и список целей",
+        "dns_endpoint": "DNS Callback Endpoint",
+        "dns_placeholder": "например, your-collaborator-url.com",
+        "dns_help": "Введите ваш DNS exfiltration endpoint (например, Burp Collaborator, Interactsh)",
+        "target_list": "Список целей",
+        "target_placeholder": "Введите URL (один на строку) или перетащите файл...",
+        "loaded_targets": "✓ Загружено {{count}} целей",
+        "upload_help": "Загрузите текстовый файл с одним URL на строку",
+        "load_file": "Загрузить из файла",
+        "clear": "Очистить",
+        "start_scan": "Начать сканирование",
+        "scanning": "Сканирование...",
+        "stop_scan": "Остановить",
+        "reset": "Сброс",
+        "demo_notice": "<strong>Демо-режим активен:</strong> Сканирование будет использовать симулированные данные вместо реальных HTTP-запросов.",
+        "validation": {
+            "dns_required": "Требуется DNS Callback Endpoint",
+            "targets_required": "Пожалуйста, добавьте хотя бы одну целевую ссылку"
+        },
+        "scan": {
+            "completed": "Сканирование успешно завершено",
+            "failed": "Сканирование не удалось: {{error}}"
+        },
+        "export": {
+            "no_results": "Нет результатов для экспорта",
+            "success": "Результаты успешно экспортированы",
+            "failed": "Экспорт не удался: {{error}}"
+        }
+    },
+    "results": {
+        "title": "Результаты",
+        "export": "Экспорт",
+        "columns": {
+            "status": "Статус",
+            "url": "URL",
+            "time": "Время",
+            "details": "Детали",
+            "actions": "Действия"
+        },
+        "status": {
+            "vulnerable": "УЯЗВИМ",
+            "safe": "БЕЗОПАСЕН",
+            "error": "ОШИБКА"
+        },
+        "tooltips": {
+            "copy_url": "Копировать URL",
+            "view_details": "Посмотреть детали"
+        },
+        "filters": {
+            "all": "Все статусы",
+            "vulnerable": "Уязвим",
+            "safe": "Безопасен",
+            "error": "Ошибки"
+        }
+    },
+    "statistics": {
+        "total": "Всего проверено",
+        "vulnerable": "Найдено уязвимых",
+        "safe": "Безопасные цели",
+        "errors": "Ошибки соединения"
+    },
+    "about": {
+        "title": "О RscScan",
+        "description": "RscScan — это специализированный инструмент безопасности, разработанный для обнаружения",
+        "description_highlight": "уязвимостей Prototype Pollution в Next.js Server Actions (CVE-2025-55182)",
+        "description_end": ". Он помогает исследователям безопасности и разработчикам выявлять потенциальные векторы RCE в приложениях Next.js.",
+        "version": "Версия",
+        "developer": "Разработчик",
+        "license": "Лицензия",
+        "website": "Веб-сайт",
+        "view_github": "Посмотреть на GitHub",
+        "close": "Закрыть",
+        "special_thanks": "Особая благодарность",
+        "original_creator": "Оригинальный создатель и инструктор",
+        "guidance_text": "Этот проект был разработан под руководством и на основе учебных материалов PentesterLand Academy.",
+        "technology_stack": "Технологический стек",
+        "tech_frontend": "Фронтенд:",
+        "tech_build": "Сборка:",
+        "tech_styling": "Стилизация:",
+        "tech_desktop": "Десктоп:",
+        "license_text": "Лицензия MIT",
+        "copyright": "© 2025 VeilVulp"
+    }
+}

@@ -1,0 +1,138 @@
+{
+    "app": {
+        "title": "RscScan",
+        "subtitle": "Next.js Server Actions RCE",
+        "warning": {
+            "title": "仅供教育用途 - 法律警告",
+            "text": "本工具<1>仅用于教育和授权的安全测试目的</1>。未经授权访问计算机系统通过是违法的。请仅在您拥有或获得明确书面许可的系统上使用此扫描器。滥用本工具可能导致刑事起诉。",
+            "footer": "RscScan | Next.js Server Actions Prototype Pollution RCE"
+        },
+        "mode": {
+            "live": "实时模式",
+            "demo": "演示模式"
+        },
+        "empty_state": {
+            "title": "准备扫描",
+            "description": "配置您的 DNS 端点并上传目标列表以开始扫描漏洞。"
+        }
+    },
+    "header": {
+        "educational": "教育",
+        "settings": "设置",
+        "about": "关于",
+        "theme_light": "切换到亮色模式",
+        "theme_dark": "切换到暗色模式",
+        "demo_toggle": "切换演示模式以安全测试",
+        "select_language": "选择语言"
+    },
+    "settings": {
+        "title": "设置",
+        "scanner_config": "扫描器配置",
+        "request_timeout": "请求超时",
+        "request_timeout_desc": "每个请求的最大等待时间（1-60秒）",
+        "max_concurrent": "最大并发请求数",
+        "max_concurrent_desc": "同时进行的请求数量（1-100）",
+        "export_settings": "导出设置",
+        "default_format": "默认导出格式",
+        "auto_save": "自动保存结果",
+        "auto_save_desc": "扫描完成后自动保存结果",
+        "appearance": "外观",
+        "theme_preference": "主题偏好",
+        "theme_system": "跟随系统",
+        "theme_light": "亮色",
+        "theme_dark": "暗色",
+        "desktop_settings": "桌面设置",
+        "minimize_tray": "最小化到系统托盘",
+        "minimize_tray_desc": "窗口关闭时保持后台运行",
+        "reset_defaults": "恢复默认",
+        "cancel": "取消",
+        "save": "保存设置",
+        "saved": "设置已保存",
+        "reset_success": "设置已重置为默认值"
+    },
+    "config": {
+        "title": "扫描配置",
+        "description": "配置 DNS 端点和目标列表",
+        "dns_endpoint": "DNS 回调端点",
+        "dns_placeholder": "例如 your-collaborator-url.com",
+        "dns_help": "输入您的 DNS 渗漏端点 (例如 Burp Collaborator, Interactsh)",
+        "target_list": "目标列表",
+        "target_placeholder": "输入 URL (每行一个) 或拖放文件...",
+        "loaded_targets": "✓ 已加载 {{count}} 个目标",
+        "upload_help": "上传包含 URL 的文本文件，每行一个",
+        "load_file": "从文件加载",
+        "clear": "清除",
+        "start_scan": "开始扫描",
+        "scanning": "正在扫描...",
+        "stop_scan": "停止扫描",
+        "reset": "重置",
+        "demo_notice": "<strong>演示模式激活:</strong> 扫描将使用模拟数据而不是发送真实的 HTTP 请求。",
+        "validation": {
+            "dns_required": "DNS 回调端点是必需的",
+            "targets_required": "请至少添加一个目标 URL"
+        },
+        "scan": {
+            "completed": "扫描成功完成",
+            "failed": "扫描失败: {{error}}"
+        },
+        "export": {
+            "no_results": "没有可导出的结果",
+            "success": "结果导出成功",
+            "failed": "导出失败: {{error}}"
+        }
+    },
+    "results": {
+        "title": "扫描结果",
+        "export": "导出结果",
+        "columns": {
+            "status": "状态",
+            "url": "URL",
+            "time": "时间",
+            "details": "详情",
+            "actions": "操作"
+        },
+        "status": {
+            "vulnerable": "存在漏洞",
+            "safe": "安全",
+            "error": "错误"
+        },
+        "tooltips": {
+            "copy_url": "复制 URL",
+            "view_details": "查看详情"
+        },
+        "filters": {
+            "all": "所有状态",
+            "vulnerable": "易受攻击",
+            "safe": "安全",
+            "error": "错误"
+        }
+    },
+    "statistics": {
+        "total": "总扫描数",
+        "vulnerable": "发现漏洞",
+        "safe": "安全目标",
+        "errors": "连接错误"
+    },
+    "about": {
+        "title": "关于 RscScan",
+        "description": "RscScan 是一款专门开发用于检测",
+        "description_highlight": "Next.js Server Actions 原型污染 (CVE-2025-55182)",
+        "description_end": "漏洞的安全工具。它帮助安全研究人员和开发人员识别 Next.js 应用程序中潜在的 RCE 向量。",
+        "version": "版本",
+        "developer": "开发者",
+        "license": "许可证",
+        "website": "网站",
+        "view_github": "在 GitHub 上查看",
+        "close": "关闭",
+        "special_thanks": "特别感谢",
+        "original_creator": "原创者 & 讲师",
+        "guidance_text": "本项目是在 PentesterLand Academy 的指导和教育内容的协助下开发的。",
+        "technology_stack": "技术栈",
+        "tech_frontend": "前端:",
+        "tech_build": "构建:",
+        "tech_styling": "样式:",
+        "tech_desktop": "桌面:",
+        "license_text": "根据 MIT 许可证授权",
+        "copyright": "© 2025 VeilVulp"
+    }
+}

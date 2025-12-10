@@ -1,0 +1,138 @@
+{
+    "app": {
+        "title": "RscScan",
+        "subtitle": "Next.js Server Actions RCE",
+        "warning": {
+            "title": "EDUCATIONAL USE ONLY - LEGAL WARNING",
+            "text": "This tool is designed for <1>educational and authorized security testing purposes only</1>. Unauthorized access to computer systems is illegal. Only use this scanner on systems you own or have explicit written permission to test. Misuse of this tool may result in criminal prosecution.",
+            "footer": "RscScan | Next.js Server Actions Prototype Pollution RCE"
+        },
+        "mode": {
+            "live": "Live Mode",
+            "demo": "Demo Mode"
+        },
+        "empty_state": {
+            "title": "Ready to Scan",
+            "description": "Configure your DNS endpoint and upload a target list to begin scanning for RscScan vulnerabilities."
+        }
+    },
+    "header": {
+        "educational": "EDUCATIONAL",
+        "settings": "Settings",
+        "about": "About",
+        "theme_light": "Switch to light mode",
+        "theme_dark": "Switch to dark mode",
+        "demo_toggle": "Toggle demo mode for safe testing",
+        "select_language": "Select Language"
+    },
+    "settings": {
+        "title": "Settings",
+        "scanner_config": "Scanner Configuration",
+        "request_timeout": "Request Timeout",
+        "request_timeout_desc": "Maximum time to wait for each request (1-60 seconds)",
+        "max_concurrent": "Max Concurrent Requests",
+        "max_concurrent_desc": "Number of simultaneous requests (1-100)",
+        "export_settings": "Export Settings",
+        "default_format": "Default Export Format",
+        "auto_save": "Auto-save Results",
+        "auto_save_desc": "Automatically save scan results after completion",
+        "appearance": "Appearance",
+        "theme_preference": "Theme Preference",
+        "theme_system": "System Default",
+        "theme_light": "Light",
+        "theme_dark": "Dark",
+        "desktop_settings": "Desktop Settings",
+        "minimize_tray": "Minimize to System Tray",
+        "minimize_tray_desc": "Keep app running in background when window is closed",
+        "reset_defaults": "Reset to Defaults",
+        "cancel": "Cancel",
+        "save": "Save Settings",
+        "saved": "Settings saved successfully",
+        "reset_success": "Settings reset to defaults"
+    },
+    "config": {
+        "title": "Scan Configuration",
+        "description": "Configure DNS endpoint and target list",
+        "dns_endpoint": "DNS Callback Endpoint",
+        "dns_placeholder": "e.g. your-collaborator-url.com",
+        "dns_help": "Enter your DNS exfiltration endpoint (e.g., Burp Collaborator, Interactsh)",
+        "target_list": "Target List",
+        "target_placeholder": "Enter URLs (one per line) or drag & drop file...",
+        "loaded_targets": "✓ Loaded {{count}} target(s)",
+        "upload_help": "Upload a text file with one URL per line",
+        "load_file": "Load from File",
+        "clear": "Clear",
+        "start_scan": "Start Scan",
+        "scanning": "Scanning...",
+        "stop_scan": "Stop Scan",
+        "reset": "Reset",
+        "demo_notice": "<strong>Demo Mode Active:</strong> Scan will use simulated data instead of making real HTTP requests.",
+        "validation": {
+            "dns_required": "DNS Callback Endpoint is required",
+            "targets_required": "Please add at least one target URL"
+        },
+        "scan": {
+            "completed": "Scan completed successfully",
+            "failed": "Scan failed: {{error}}"
+        },
+        "export": {
+            "no_results": "No results to export",
+            "success": "Results exported successfully",
+            "failed": "Export failed: {{error}}"
+        }
+    },
+    "results": {
+        "title": "Scan Results",
+        "export": "Export Results",
+        "columns": {
+            "status": "Status",
+            "url": "URL",
+            "time": "Time",
+            "details": "Details",
+            "actions": "Actions"
+        },
+        "status": {
+            "vulnerable": "VULNERABLE",
+            "safe": "SAFE",
+            "error": "ERROR"
+        },
+        "tooltips": {
+            "copy_url": "Copy URL",
+            "view_details": "View Details"
+        },
+        "filters": {
+            "all": "All Status",
+            "vulnerable": "Vulnerable",
+            "safe": "Not Vulnerable",
+            "error": "Errors"
+        }
+    },
+    "statistics": {
+        "total": "Total Scanned",
+        "vulnerable": "Vulnerable Found",
+        "safe": "Safe Targets",
+        "errors": "Connection Errors"
+    },
+    "about": {
+        "title": "About RscScan",
+        "description": "RscScan is a specialized security tool developed to detect",
+        "description_highlight": "Next.js Server Actions Prototype Pollution (CVE-2025-55182)",
+        "description_end": "vulnerabilities. It helps security researchers and developers identify potential RCE vectors in Next.js applications.",
+        "version": "Version",
+        "developer": "Developer",
+        "license": "License",
+        "website": "Website",
+        "view_github": "View on GitHub",
+        "close": "Close",
+        "special_thanks": "Special Thanks",
+        "original_creator": "Original Creator & Instructor",
+        "guidance_text": "This project was developed under the guidance and educational content provided by PentesterLand Academy.",
+        "technology_stack": "Technology Stack",
+        "tech_frontend": "Frontend:",
+        "tech_build": "Build:",
+        "tech_styling": "Styling:",
+        "tech_desktop": "Desktop:",
+        "license_text": "Licensed under MIT License",
+        "copyright": "© 2025 VeilVulp"
+    }
+}

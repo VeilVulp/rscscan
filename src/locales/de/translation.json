@@ -1,0 +1,138 @@
+{
+    "app": {
+        "title": "RscScan",
+        "subtitle": "Next.js Server Actions RCE",
+        "warning": {
+            "title": "NUR FÜR BILDUNGSZWECKE - RECHTLICHER HINWEIS",
+            "text": "Dieses Tool ist <1>ausschließlich für Bildungszwecke und autorisierte Sicherheitstests</1> konzipiert. Unbefugter Zugriff auf Computersysteme ist illegal. Verwenden Sie diesen Scanner nur auf Systemen, die Ihnen gehören oder für die Sie eine ausdrückliche schriftliche Genehmigung haben. Missbrauch kann strafrechtlich verfolgt werden.",
+            "footer": "RscScan | Next.js Server Actions Prototype Pollution RCE"
+        },
+        "mode": {
+            "live": "Live-Modus",
+            "demo": "Demo-Modus"
+        },
+        "empty_state": {
+            "title": "Bereit zum Scannen",
+            "description": "Konfigurieren Sie Ihren DNS-Endpunkt und laden Sie eine Zielliste hoch, um den Scan zu starten."
+        }
+    },
+    "header": {
+        "educational": "BILDUNG",
+        "settings": "Einstellungen",
+        "about": "Über",
+        "theme_light": "Hellen Modus aktivieren",
+        "theme_dark": "Dunklen Modus aktivieren",
+        "demo_toggle": "Demo-Modus für sicheres Testen umschalten",
+        "select_language": "Sprache wählen"
+    },
+    "settings": {
+        "title": "Einstellungen",
+        "scanner_config": "Scanner-Konfiguration",
+        "request_timeout": "Anfrage-Zeitüberschreitung",
+        "request_timeout_desc": "Maximale Wartezeit pro Anfrage (1-60 Sekunden)",
+        "max_concurrent": "Max. gleichzeitige Anfragen",
+        "max_concurrent_desc": "Anzahl gleichzeitiger Anfragen (1-100)",
+        "export_settings": "Exporteinstellungen",
+        "default_format": "Standard-Exportformat",
+        "auto_save": "Ergebnisse automatisch speichern",
+        "auto_save_desc": "Ergebnisse nach Abschluss automatisch speichern",
+        "appearance": "Erscheinungsbild",
+        "theme_preference": "Design-Präferenz",
+        "theme_system": "Systemstandard",
+        "theme_light": "Hell",
+        "theme_dark": "Dunkel",
+        "desktop_settings": "Desktop-Einstellungen",
+        "minimize_tray": "In Systemleiste minimieren",
+        "minimize_tray_desc": "App im Hintergrund ausführen, wenn Fenster geschlossen wird",
+        "reset_defaults": "Auf Standard zurücksetzen",
+        "cancel": "Abbrechen",
+        "save": "Speichern",
+        "saved": "Einstellungen erfolgreich gespeichert",
+        "reset_success": "Einstellungen auf Standard zurückgesetzt"
+    },
+    "config": {
+        "title": "Scan-Konfiguration",
+        "description": "DNS-Endpunkt und Zielliste konfigurieren",
+        "dns_endpoint": "DNS Callback Endpunkt",
+        "dns_placeholder": "z.B. deine-collaborator-url.com",
+        "dns_help": "Geben Sie Ihren DNS-Exfiltration-Endpunkt ein (z.B. Burp Collaborator, Interactsh)",
+        "target_list": "Zielliste",
+        "target_placeholder": "URLs eingeben (eine pro Zeile) oder Datei hierher ziehen...",
+        "loaded_targets": "✓ {{count}} Ziel(e) geladen",
+        "upload_help": "Laden Sie eine Textdatei mit einer URL pro Zeile hoch",
+        "load_file": "Aus Datei laden",
+        "clear": "Löschen",
+        "start_scan": "Scan starten",
+        "scanning": "Scannen...",
+        "stop_scan": "Scan stoppen",
+        "reset": "Zurücksetzen",
+        "demo_notice": "<strong>Demo-Modus aktiv:</strong> Der Scan verwendet simulierte Daten anstelle von echten HTTP-Anfragen.",
+        "validation": {
+            "dns_required": "DNS Callback Endpunkt ist erforderlich",
+            "targets_required": "Bitte fügen Sie mindestens eine Ziel-URL hinzu"
+        },
+        "scan": {
+            "completed": "Scan erfolgreich abgeschlossen",
+            "failed": "Scan fehlgeschlagen: {{error}}"
+        },
+        "export": {
+            "no_results": "Keine Ergebnisse zum Exportieren",
+            "success": "Ergebnisse erfolgreich exportiert",
+            "failed": "Export fehlgeschlagen: {{error}}"
+        }
+    },
+    "results": {
+        "title": "Scan-Ergebnisse",
+        "export": "Ergebnisse exportieren",
+        "columns": {
+            "status": "Status",
+            "url": "URL",
+            "time": "Zeit",
+            "details": "Details",
+            "actions": "Aktionen"
+        },
+        "status": {
+            "vulnerable": "ANFÄLLIG",
+            "safe": "SICHER",
+            "error": "FEHLER"
+        },
+        "tooltips": {
+            "copy_url": "URL kopieren",
+            "view_details": "Details anzeigen"
+        },
+        "filters": {
+            "all": "Alle Status",
+            "vulnerable": "Verwundbar",
+            "safe": "Nicht verwundbar",
+            "error": "Fehler"
+        }
+    },
+    "statistics": {
+        "total": "Gesamt gescannt",
+        "vulnerable": "Anfällig gefunden",
+        "safe": "Sichere Ziele",
+        "errors": "Verbindungsfehler"
+    },
+    "about": {
+        "title": "Über RscScan",
+        "description": "RscScan ist ein spezialisiertes Sicherheitstool zur Erkennung von",
+        "description_highlight": "Next.js Server Actions Prototype Pollution (CVE-2025-55182)",
+        "description_end": "Schwachstellen. Es hilft Sicherheitsforschern und Entwicklern, potenzielle RCE-Vektoren in Next.js-Anwendungen zu identifizieren.",
+        "version": "Version",
+        "developer": "Entwickler",
+        "license": "Lizenz",
+        "website": "Webseite",
+        "view_github": "Auf GitHub ansehen",
+        "close": "Schließen",
+        "special_thanks": "Besonderer Dank",
+        "original_creator": "Originalersteller & Dozent",
+        "guidance_text": "Dieses Projekt wurde unter der Anleitung und mit den Bildungsinhalten der PentesterLand Academy entwickelt.",
+        "technology_stack": "Technologie-Stack",
+        "tech_frontend": "Frontend:",
+        "tech_build": "Build:",
+        "tech_styling": "Styling:",
+        "tech_desktop": "Desktop:",
+        "license_text": "Lizenziert unter MIT-Lizenz",
+        "copyright": "© 2025 VeilVulp"
+    }
+}

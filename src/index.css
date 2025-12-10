@@ -1,0 +1,248 @@
+@import 'tailwindcss';
+
+/* ===========================
+   CUSTOM VARIANTS & THEME
+   =========================== */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-dark-bg: #0f172a;
+  --color-dark-card: #1e293b;
+  --color-dark-border: #334155;
+  --color-dark-text: #e2e8f0;
+  --color-dark-muted: #94a3b8;
+
+  --color-light-bg: #f8fafc;
+  --color-light-card: #ffffff;
+  --color-light-border: #e2e8f0;
+  --color-light-text: #1e293b;
+  --color-light-muted: #64748b;
+
+  --color-accent-primary: #3b82f6;
+  --color-accent-success: #10b981;
+  --color-accent-warning: #f59e0b;
+  --color-accent-danger: #ef4444;
+  --color-accent-info: #06b6d4;
+
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-spin-slow: spin 3s linear infinite;
+
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-mono: Fira Code, monospace;
+  --font-persian: Vazirmatn, Tahoma, sans-serif;
+  --font-chinese: "Noto Sans SC", "PingFang SC", sans-serif;
+  --font-russian: Roboto, Inter, sans-serif;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4.
+  Compatibility layer — remove safely if explicit border colors are set.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+/* ===========================
+   UTILITIES & COMPONENTS
+   =========================== */
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility card-shadow {
+  box-shadow:
+    0 1px 3px 0 rgb(0 0 0 / 0.1),
+    0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+@utility card-shadow-lg {
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* 🎨 BUTTONS */
+@utility btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200
+           disabled:opacity-50 disabled:cursor-not-allowed
+           focus:outline-hidden focus:ring-2 focus:ring-offset-2;
+}
+@utility btn-primary {
+  @apply btn bg-accent-primary text-white hover:bg-accent-primary/90
+           focus:ring-accent-primary;
+}
+@utility btn-danger {
+  @apply btn bg-accent-danger text-white hover:bg-accent-danger/90
+           focus:ring-accent-danger;
+}
+@utility btn-secondary {
+  @apply btn bg-light-card dark:bg-dark-card
+           text-light-text dark:text-dark-text
+           border border-light-border dark:border-dark-border
+           hover:bg-light-border dark:hover:bg-dark-border
+           focus:ring-light-muted dark:focus:ring-dark-muted;
+}
+
+/* 🧾 INPUTS */
+@utility input {
+  @apply w-full px-4 py-2 rounded-lg
+           bg-light-card dark:bg-dark-card
+           text-light-text dark:text-dark-text
+           border border-light-border dark:border-dark-border
+           focus:outline-hidden focus:ring-2 focus:ring-accent-primary
+           placeholder:text-light-muted dark:placeholder:text-dark-muted
+           transition-all duration-200;
+}
+
+/* 🧩 CARDS & BADGES */
+@utility card {
+  @apply bg-light-card dark:bg-dark-card
+           border border-light-border dark:border-dark-border
+           rounded-lg p-6 card-shadow;
+}
+@utility badge {
+  @apply px-3 py-1 rounded-full text-xs font-semibold inline-flex items-center gap-1;
+}
+@utility badge-success {
+  @apply badge bg-accent-success/10 text-accent-success;
+}
+@utility badge-danger {
+  @apply badge bg-accent-danger/10 text-accent-danger;
+}
+@utility badge-warning {
+  @apply badge bg-accent-warning/10 text-accent-warning;
+}
+@utility badge-info {
+  @apply badge bg-accent-info/10 text-accent-info;
+}
+
+/* ===========================
+   ROOT VARIABLES & RESET
+   =========================== */
+@layer utilities {
+  :root {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100vh;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  /* Scrollbar Styles */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: var(--color-light-bg);
+  }
+
+  .dark ::-webkit-scrollbar-track {
+    background-color: var(--color-dark-bg);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-light-muted);
+    border-radius: 0.5rem;
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background-color: var(--color-dark-muted);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(30, 41, 59, 0.5);
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(226, 232, 240, 0.5);
+  }
+}
+
+/* ===========================
+   ANIMATIONS & CODE BLOCKS
+   =========================== */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 1000px 100%;
+}
+
+.dark {
+  background-color: var(--color-dark-bg);
+  color: var(--color-dark-text);
+}
+
+.light {
+  background-color: var(--color-light-bg);
+  color: var(--color-light-text);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.125rem;
+  background-color: var(--color-light-border);
+  color: var(--color-accent-primary);
+}
+
+.dark code {
+  background-color: var(--color-dark-border);
+}
+
+pre {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  background-color: var(--color-light-border);
+}
+
+.dark pre {
+  background-color: var(--color-dark-border);
+}
+
+pre code {
+  padding: 0;
+  background-color: transparent;
+}
+
+/* Toastify Override */
+.Toastify__toast-body {
+  font-family: var(--font-sans) !important;
+}
